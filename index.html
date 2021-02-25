@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A simple pokemon game using pokeAPI">
+    <meta name="keywords" content="pokemon">
+
+    <title>Pokémon Observer</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        nav
+    </header>
+    <p>Click in the different habitats to observe a well-hidden pokémon & add it to your list!</p>
+    <main class="container">
+    
+    <section class="habitats">
+        
+        <div class="sea">sea</div>
+        <div class="urban">urban</div>
+        <div class="waters-edge">waters-edge</div>
+        <div class="grassland">grassland</div>
+    </section>
+    <section class="list">
+        <h1>Observed pokémon:</h1>
+        <ul class="pokelist"></ul>
+        <div class="message hide">
+            <p class="max"></p>
+            <span class="refresh">Refresh</span>
+        </div>
+    </section>
+
+    <section class="overlay hide">
+        <p>(Click anywhere to close)</p>
+        <h1 class="name"></h1>
+        <h3 class="height"></h3>
+        <h3 class="habitat"></h3>
+        <h4 class="abilities"></h4>
+        <img class="sprite" src="" alt="">
+        <p class="flavorText"></p>
+    </section>
+    </main>
+   
+    <section class="popup hide"></section>
+
+    <footer>
+        <p>Copyright 2021 mViolet</p>
+    </footer>
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
