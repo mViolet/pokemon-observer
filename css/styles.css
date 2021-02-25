@@ -8,6 +8,11 @@
 }
 
 /* main styles */
+.habitats {
+    background: url(../images/poke-day.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 body {
     font-family: 'Press Start 2P', monospace;
@@ -38,23 +43,27 @@ body {
     bottom: 0;
 }
 
+.overl
+
 header {
-    height: 50px;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
 .list {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     /* grid-template-rows: 10% 60% 20%; */
+    background: dimgray;
+    color: ghostwhite;
 }
 
 .list *{
-    border: 1px solid green;
+    padding: 0 0 10px 5px;
 }
 
 .container {
@@ -74,7 +83,7 @@ footer {
 }
 
 .habitats > div {
-    min-height: 200px;
+    min-height: 300px
 }
 
 /* actions */
@@ -95,6 +104,10 @@ li {
 
 /* styles */
 
+header, .intro {
+    padding: 20px;
+}
+
 img {
     max-width: 200px;
 }
@@ -103,26 +116,30 @@ img {
     padding: 30px;
 }
 
+.close {
+    padding: 20px 0;
+}
+
 .overlay {
     background: rgba(0,0,0,.9);
-    color: white;
+    color: ghostwhite;
     cursor: pointer;
 }
 
 .habitats {
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .habitats > div {
-    border: 2px solid magenta;
+    /* border: 2px solid magenta; */
 }
 
 .list {
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
 }
 
 header, footer {
-    background: lightblue;
+    background: lightpink;
 }
 
 /* media queries */
@@ -131,6 +148,15 @@ header, footer {
     .container {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .habitats > div {
+        min-height: 200px;
+    }
+
+    .habitats {
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
     .list {
