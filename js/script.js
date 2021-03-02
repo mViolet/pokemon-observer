@@ -14,12 +14,11 @@ let counter = 0 //counter for max poke of 10
 function displayInfo(e) {
     let node = e.target.nodeName.toLowerCase()
     if (node === 'li') {
-        let name = e.toElement.innerText
+        let name = e.target.innerText
 
         fetch(`https://pokeapi.co/api/v2/pokemon/${name}`) //get information for overlay
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 let abilities = []
                 data.abilities.forEach(e => abilities.push(e.ability.name))
 
@@ -32,8 +31,6 @@ function displayInfo(e) {
                 fetch(data.species.url)
                     .then(res => res.json())
                     .then(data => {
-
-                        console.log(data)
                         document.querySelector('.habitat').innerText = `Habitat: ${data.habitat.name}`
                         
                         let n = 0
@@ -58,7 +55,7 @@ function displayInfo(e) {
 
 function getData(e) {
 
-    let place = e.path[0].className
+    let place = e.target.className
 
     fetch(`https://pokeapi.co/api/v2/pokemon-habitat/${place}/`)
         .then(res => res.json()) 
