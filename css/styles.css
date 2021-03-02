@@ -95,6 +95,12 @@ li {
     cursor: pointer;
 }
 
+li:hover {
+    color:#78effa;
+    font-size: 1.3em;
+    transition: font-size .08s ease-in-out;
+}
+
 .refresh {
     cursor: pointer;
     color: white;
@@ -143,6 +149,26 @@ header, footer {
 }
 
 /* media queries */
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .habitats > div {
+        min-height: 200px;
+    }
+
+    .habitats {
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .list {
+        display: block;
+    }
+}
 
 @media screen and (max-width: 800px) {
     .container {
